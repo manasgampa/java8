@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <context-param>
+  	<param-name>url</param-name>
+  	<param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>url1</param-name>
+  	<param-value>abc</param-value>
+  </context-param>
+  
+   <servlet>
+  	<servlet-name>two</servlet-name>
+  	<jsp-file>/WEB-INF/Two.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>two</servlet-name>
+  	<url-pattern>/abc</url-pattern>
+  </servlet-mapping> 
+  <servlet>
+  	<servlet-name>SecondServlet</servlet-name>
+  	<servlet-class>net.antra.servlet.SecondServlet</servlet-class>
+  	<init-param>
+  		<param-name>abc</param-name>
+  		<param-value>123</param-value>
+  	</init-param>
+  		<init-param>
+  		<param-name>abcd</param-name>
+  		<param-value>1234</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SecondServlet</servlet-name>
+  	<url-pattern>/ss</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>ThirdServlet</servlet-name>
+  	<servlet-class>net.antra.servlet.ThirdServlet</servlet-class>
+  	
+  	<init-param>
+  		<param-name>abcd</param-name>
+  		<param-value>1234</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>ab</param-name>
+  		<param-value>12</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ThirdServlet</servlet-name>
+  	<url-pattern>/ts</url-pattern>
+  </servlet-mapping>
+    <servlet>
+  	<servlet-name>FourthServlet</servlet-name>
+  	<servlet-class>net.antra.servlet.FourthServlet</servlet-class>
+  	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>FourthServlet</servlet-name>
+  	<url-pattern>/ffs</url-pattern>
+  </servlet-mapping>
+ 
+</web-app>
