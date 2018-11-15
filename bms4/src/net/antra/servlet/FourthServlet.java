@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 public class FourthServlet extends HttpServlet {
 	
 	public void service(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException {
-		//new cookies
+		//new cookies will be added
 		/*Cookie c1=new Cookie("uname","Anna");
 		response.addCookie(c1);*/
 		
