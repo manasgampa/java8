@@ -14,7 +14,9 @@ public class FourthServlet extends HttpServlet {
 	
 	public void service(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException {
 		//new cookies will be added
+
 		//new commite for fourth servlet
+
 		/*Cookie c1=new Cookie("uname","Anna");
 		response.addCookie(c1);*/
 		
